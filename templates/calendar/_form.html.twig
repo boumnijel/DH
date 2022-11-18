@@ -1,0 +1,36 @@
+
+
+
+{{ form_start(form) }}
+
+    {{ form_row(form.title,{'value':app.user.email})  }}
+    {{ form_row(form.start) }}
+    {{ form_row(form.end) }}
+
+
+    <div style="display: none">
+        {{ form_row(form.description,{'value':app.user.email}) }}
+        {{ form_row(form.all_day) }}
+
+
+
+        {{ form_row(form.background_color,{'value':'#ffcc00'}) }}
+        {{ form_row(form.border_color,{'value':'#ffeedd'}) }}
+        {{ form_row(form.text_color,{'value':'#000000'}) }}
+        {{ form_row(form.state,{'value':'free'}) }}
+        {{ form_row(form.user_patient,{'value':0}) }}
+        {{ form_row(form.creatAt) }}
+        {{ form_label(form.calendar_user, 'Current user', {
+            'label_attr': {'class': 'CUSTOM_LABEL_CLASS'}})
+        }}
+        {{ form_row(form.calendar_user,{'value':app.user.id}) }}
+    </div>
+
+
+<div class="btn-demo" align="right">
+    <button class="btn btn-success waves-effect">{{ button_label|default('Save') }}</button>
+    <a class="btn btn-info waves-effect" href="{{ path('calendar_index') }}">back to list</a>
+</div>
+
+</div>
+{{ form_end(form) }}

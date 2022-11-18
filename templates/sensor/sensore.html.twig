@@ -1,0 +1,186 @@
+{% extends 'basesensor.html.twig' %}
+
+
+{% block body %}
+
+        {% for sensor in sensors %}
+    <script type="text/javascript">
+
+                        var d = new Date();
+                        var date = d.getFullYear()+'-'+(d.getMonth()+1)+'-'+d.getDate();
+                        var hours = d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds();
+                        document.getElementById("DSYS").innerHTML = date;
+
+                </script>
+
+
+          {% if sensor.name =='spo2' %}
+
+
+           <div class="col-sm-12" align="center" id="here">
+
+              <div class="col-sm-3" align="center"><img src="../INS/Ins1.gif" height="100px" width="100px"><br>Spo2</div>
+                <script type="text/javascript">
+
+                        var PI = parseInt('{{ sensor.value[6:2] }}', 16)/10
+                        document.getElementById("PI").innerHTML = PI+ " %";
+
+                        var SPO = parseInt('{{ sensor.value[-4:-2] }}', 16)
+                        document.getElementById("SPO").innerHTML = SPO+ " BPM";
+
+                        var PR = parseInt('{{ sensor.value[-6:-4] }}', 16)
+                        document.getElementById("PR").innerHTML = PR+ " %";
+
+                       
+
+                </script>
+
+                                
+
+              <div class="col-sm-3" align="center"><h5> Arterial hemoglobin saturation </h5>
+                                 <h3 id="PI">%</h3>
+
+                 <h6 class="clignote r"> Please close the pulse sensor</h6><h5 class="inter">The reading shows the percentage of hemoglobin
+                      arterial blood molecules saturated with oxygen.
+                  </h5>
+              </div>
+              <div class="col-sm-3" align="center"><h5> Pulse SpO2</h5>
+                                 <h3 id="SPO">BMP</h3>
+
+                 <h6 class="clignote r"> Please close the pulse sensor</h6><h5 class="inter" >Les lectures varient de 0 à 100%. <br> Normal readings
+                      chez un adulte en bonne santé, cependant, varient de 94% à 100%.</h5>
+              </div>
+              <div class="col-sm-3" align="center"><h5> Perfusion Index </h5> 
+                                 <h3 id="PR">%</h3>
+
+                  <h6 class="clignote r"> Please close the pulse sensor</h6><h5 class="inter" >In this work to diagnose peripheral hypoperfusion with a sensitivity of 86% and specificity of 100%</h5>
+
+              </div>
+
+
+              <hr>
+
+
+          </div><br><br>
+
+
+
+
+          {% endif %}
+
+    {% if sensor.name =='Blood_Pressure'  %}
+
+        <div class="col-sm-12" align="center"><div class="col-sm-3" align="center"><img src="../INS/Ins2.gif" height="100px" width="100px"><br></br>Blood_Pressure</h3>
+       </div>
+
+        <script type="text/javascript">
+
+                        var Systolic_data= parseInt('{{ sensor.value[-32:-30] }}', 16)
+                        document.getElementById("Systolic_data").innerHTML = Systolic_data+ " mmHg";
+
+                        var Diastolic_data= parseInt('{{ sensor.value[-28:-26] }}', 16)
+                        document.getElementById("Diastolic_data").innerHTML = Diastolic_data+ " mmHg";
+
+                        var Pulse_rate_data= parseInt('{{ sensor.value[-20:-18] }}', 16)
+                        document.getElementById("Pulse_rate_data").innerHTML = Pulse_rate_data+ " BMP";
+
+         </script>
+
+
+
+           <div class="col-sm-3" align="center"><br><h5> Systolic data </h5>
+                
+                <h3 id="Systolic_data"></h3>
+
+               <h6 class="clignote r">Make sure the other sensors are closed</h6>
+
+
+                <h5 class="inter" >The systolic blood pressure measures the pressure in your arteries when your heart beats </h5>
+
+            </div>
+
+          <div class="col-sm-3" align="center"><br><h5> Diastolic data </h5>
+          
+               
+              <h3 id="Diastolic_data"></h3>
+
+               <h6 class="clignote r">Make sure the other sensors are closed</h6>
+
+                <h5 class="inter" >The diastolic blood pressure measures the pressure in your arteries when your heart rests between beats</h5>
+
+            </div>
+            <div class="col-sm-3" align="center"><br><h5> Pulse Rate Data </h5>
+                
+              <h3 id="Pulse_rate_data"></h3>
+
+                 <h6 class="clignote r">Make sure the other sensors are closed</h6>
+
+                <h5 class="inter" >Pulse rate data or Heart rate is generally expressed as the number of beats per minute (bpm), If measurement is performed for 15 or 30 s, the resulting number must be multiplied by 4 or 2 to convert it into bpm</h5>
+
+            </div><hr></div>
+    {% endif %}
+
+            {% if sensor.name =='thermometer'  %}
+                <div class="col-sm-12" align="center">
+
+ <script type="text/javascript">
+
+                        
+          var Mantisse1 = "{{ sensor.value[-5:-4] }}"    
+          var Mantisse2 = "{{ sensor.value[-6:-5] }}"  
+          var Mantisse3 = "{{ sensor.value[-7:-6] }}"       
+          var Mantisse4 = "{{ sensor.value[-8:-7] }}"   
+          var Mantisse5 = "{{ sensor.value[-9:-8] }}"    
+          var Mantisse6 = "{{ sensor.value[-10:-9] }}" 
+          var MantisseT= Mantisse4+Mantisse2+Mantisse1+Mantisse3+Mantisse6+Mantisse5
+          var MantisseTH = parseInt(MantisseT, 16)
+
+
+          var TEMP= MantisseTH * 0.01
+           document.getElementById("TEMP").innerHTML = TEMP+ " °C";
+
+         </script>
+
+
+
+     
+
+
+                <div class="col-sm-3" align="center">
+                    <img src="../INS/Ins3.gif" height="100px" width="100px"><br>
+</h3>
+
+                </div>
+
+                <div class="col-sm-3" align="center">
+                    <br><br>
+                    --
+                </div>
+
+                <div class="col-sm-3" align="center">
+                    <h5> Temperature </h5>
+
+              <h3 id="TEMP"></h3>
+
+                    <h5 class="inter">if your temperature is between 36.1 or 37.8 then your temperature is normal, if it is higher you have a fever</h5>
+                    <h6 class="clignote r"> Please Close your device now</h6></div>
+
+
+                <div class="col-sm-3" align="center">
+                    <br><br>
+                    --
+
+                </div><br><br>
+            {% endif %}
+
+
+
+        {% endfor %}
+        </div>
+    </table>
+
+
+
+
+
+{% endblock %}

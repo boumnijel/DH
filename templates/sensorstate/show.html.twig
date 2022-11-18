@@ -1,0 +1,34 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Sensorstate{% endblock %}
+
+{% block body %}
+    <h1>Sensorstate</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ sensorstate.id }}</td>
+            </tr>
+            <tr>
+                <th>Nom</th>
+                <td>{{ sensorstate.nom }}</td>
+            </tr>
+            <tr>
+                <th>State</th>
+                <td>{{ sensorstate.state }}</td>
+            </tr>
+            <tr>
+                <th>DatetimeAt</th>
+                <td>{{ sensorstate.datetimeAt ? sensorstate.datetimeAt|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('sensorstate_index') }}">back to list</a>
+
+    <a href="{{ path('sensorstate_edit', {'id': sensorstate.id}) }}">edit</a>
+
+    {{ include('sensorstate/_delete_form.html.twig') }}
+{% endblock %}

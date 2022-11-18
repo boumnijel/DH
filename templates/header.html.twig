@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    {% block stylesheets %}
+        <!-- Bootstrap -->
+        <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
+        <link href="{{ asset('css/bootstrap-dropdownhover.min.css') }}" rel="stylesheet">
+        <!-- Fonts Awesome -->
+        <link href="{{ asset('css/font-awesome.min.css') }}" rel="stylesheet">
+
+        <!-- animate Effect -->
+        <link href="{{ asset('css/animate.css') }}" rel="stylesheet">
+        <!-- Main CSS -->
+        <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+        <!-- Responsive CSS -->
+        <link href="{{ asset('css/responsive.css') }}" rel="stylesheet">
+
+    {% endblock %}
+
+
+</head>
+<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Doctohere, Doctor, Patient, Online, Solution, appointment,consultations, examination, reports, health, electronically, Box">
+    <meta name="author" content="rkwebdesigns">
+    <!-- Site Title   -->
+    <title> Doctohere : Make an online appointment with a doctor </title>
+    <meta name="description" content="DOCTOHERE is an electronic health solution for e-consultations.DOCTOHERE removes the need to process paper-based health examination reports, and allows panel doctors to record patient's health information electronically." />
+
+    <!-- Fav Icons   -->
+    <link rel="icon" href="{{ asset('images/favicon.png') }}" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="120x120" href="{{ asset('image/apple-touch-icon-120x120-precomposed.png') }}" />
+    <link rel="apple-touch-icon" sizes="152x152" href="{{ asset('image/apple-touch-icon-152x152-precomposed.png') }}" />
+
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+        var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+        (function(){
+            var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+            s1.async=true;
+            s1.src='https://embed.tawk.to/5ff2202edf060f156a93e685/1er4srfbr';
+            s1.charset='UTF-8';
+            s1.setAttribute('crossorigin','*');
+            s0.parentNode.insertBefore(s1,s0);
+        })();
+    </script>
+
+    <style>
+
+        .theme-background-color {
+            background-color: #2196F3;
+        }
+    </style>
+    <!--End of Tawk.to Script-->
+    <link href="{{ asset('https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.1.0/css/flag-icon.min.css') }}" rel="stylesheet">
+
+</head>
+    <body>
+    {% block body %}
+    <header id="header" class="head">
+    <div class="top-header">
+        <div class="container">
+            <div class="row ">
+                <ul class="contact-detail2 col-md-6 pull-left">
+                    <li> <a href="#" target="_blank"><i class="fa fa-mobile"></i>Call US +33 09 62 63 53 65</a> </li>
+                    <li> <a href="#" target="_blank"><i class="fa fa-envelope-o"></i> contact@doctohere.com</a> </li>
+                </ul>
+                <div class="social-links col-md-6 ">
+
+                    <ul class="social-icons">
+                        <li>	  <a href="https://www.doctohere.com/Login/logindoctor.php" style="    background: white; border-radius: 5px; color: #2196F3;"> Are you a healthcare professional?</a> </li>
+                        <li> <a href="#" target="_blank"><i class="fa fa-facebook"></i></a> </li>
+                        <li> <a href="#" target="_blank"><i class="fa fa-skype"></i></a> </li>
+                        <li class="dropdown" style="z-index: 9; position: fixed;">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="flag-icon flag-icon-us"> </span> English</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="https://www.doctohere.com/FR"><span class="flag-icon flag-icon-fr"> </span>  French</a></li>
+                                <li><a href="https://www.doctohere.com/AR"><span class="flag-icon flag-icon-sa"> </span>  العربية</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav class="navbar navbar-default navbar-menu">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="https://www.doctohere.com/">
+                    <div class="logo-text"><img src="images/logo.png" style="width: 165px;"></div>
+                    <!-- <img src="images/logo.png" alt="logo"> -->
+                </a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" data-hover="dropdown" data-animations="fadeIn">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active"><a href="/">Home</a></li>
+                    <li><a href="/about">About us </a></li>
+                    <li><a href="/services">Services </a></li>
+                    <li><a href="/contact">Contact Us</a></li>
+                    <li class="login"><a href="/login"><b style ="color:#fff">Login</b></a></li>
+                    <li class="nav-item dropdown">
+                </ul>
+            </div>
+            <!--/.nav-collapse -->
+        </div>
+    </nav>
+        {% endblock %}
+    </body>
+</html>

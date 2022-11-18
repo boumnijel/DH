@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Calendar index{% endblock %}
+
+{% block body %}
+    <section id="content">
+        <div class="container">
+            <div class="block-header">
+                
+            <h2><i class="zmdi zmdi-equalizer m-r-5"></i>  Physical examination</h2>
+
+            <script src="https://code.jquery.com/jquery-latest.js"></script>
+
+            <script>
+                $(document).ready(function() {
+                    var refreshId = setInterval(function() {
+                        $("#responsecontainer").load("{{ path('sensore')}}");
+                    }, 500);
+                    $.ajaxSetup({ cache: false });
+                });
+            </script>
+
+            <div id="responsecontainer">
+            </div>
+
+        </div>
+        </div>
+        </div></section>
+{% endblock %}
+

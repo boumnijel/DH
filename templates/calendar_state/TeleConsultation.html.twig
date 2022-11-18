@@ -1,0 +1,178 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Calendar index{% endblock %}
+
+{% block body %}
+    <section id="content">
+        <div class="container">
+            <div class="block-header">
+                <ul class="actions">
+                    <li>
+                        <a href="">
+                            <i class="zmdi zmdi-trending-up"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="zmdi zmdi-check-all"></i>
+                        </a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="" data-toggle="dropdown">
+                            <i class="zmdi zmdi-more-vert"></i>
+                        </a>
+
+                        <ul class="dropdown-menu dropdown-menu-right">
+                            <li>
+                                <a href="">Refresh</a>
+                            </li>
+                            <li>
+                                <a href="">Manage Widgets</a>
+                            </li>
+                            <li>
+                                <a href="">Widgets Settings</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+
+            <h2><i class="zmdi zmdi-equalizer m-r-5"></i> Tele Consultation</h2>
+            <div class="card-body card-padding">
+                <div class="row" align="center">
+
+
+                    <script type='text/javascript' src="{{asset('https://cdn.scaledrone.com/scaledrone.min.js') }}"></script>
+                    <div class="copy2" align="center"><a href="#" align="center"><img src="n.png"  width="40px"></a></div>
+                    <button disabled id="flip-btn">Flip Camera </button>
+                    <script src="script.js"></script>
+
+                    <style>
+
+                        #localVideo {
+                            width: 200px;
+                            top: 250px;
+                            right: 0;
+                            position: absolute;
+
+                        }
+
+
+                        #remoteVideo{
+                            width:100%;
+                            height: 100vh;}
+                        .copy {
+                            position: fixed;
+                            top: 0;
+                            left: 0;
+                        }
+
+                        .copy2 {
+                            position: fixed;
+                            bottom: 25px;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            font-size: 18px;
+                            color: white;
+                        }
+
+
+                        #camera-stream {
+                            position: absolute;
+                            width: 100%;
+                            height: 100%;
+                        }
+
+                        #flip-btn {
+                            position: absolute;
+                            top: 200px;
+                            right: 0px;
+                            padding: 10px 20px;
+
+                        }
+                    </style>
+                    </head>
+                    <body>
+
+                    <video id="remoteVideo" autoplay></video>
+
+                    <style>
+                        .iframe-container iframe {
+                            display: block;       /* iframes are inline by default */
+                            background:#fff;
+                            border: none;         /* Reset default border */
+                            height: 100vh;        /* Viewport-relative units */
+
+
+                            position: fixed; left: 0; width:250px;
+                        }
+                    </style>
+
+                </div>
+
+                <video id="localVideo" autoplay muted style></video>
+
+                <video id="localVideo2"  style></video>
+
+
+
+
+
+                <script>
+                    // camera stream video element
+                    let videoElm = document.querySelector('#localVideo');
+
+                    // flip button element
+                    let flipBtn = document.querySelector('#flip-btn');
+
+                    // default user media options
+                    let defaultsOpts = { audio: false, video: true }
+                    let shouldFaceUser = true;
+
+                    // check whether we can use facingMode
+                    let supports = navigator.mediaDevices.getSupportedConstraints();
+                    if( supports['facingMode'] === true ) {
+                        flipBtn.disabled = false;
+                    }
+
+
+
+                    let stream = null;
+
+                    function capture() {
+                        defaultsOpts.video = { facingMode: shouldFaceUser ? 'user' : 'environment' }
+                        navigator.mediaDevices.getUserMedia(defaultsOpts)
+                            .then(function(_stream) {
+                                stream  = _stream;
+                                videoElm.srcObject = stream;
+                                videoElm.play();
+
+                            })
+                        //.catch(function(err) {
+                        // console.log(err)});
+                    }
+
+                    flipBtn.addEventListener('click', function(){
+                        if( stream == null ) return
+                        // we need to flip, stop everything
+                        stream.getTracks().forEach(t => {
+                            t.stop();
+                        });
+                        // toggle / flip
+                        shouldFaceUser = !shouldFaceUser;
+                        capture();
+                        document.location.reload();
+
+                    })
+
+                    capture();
+
+                </script>
+
+
+            </div>
+
+        </div></section>
+{% endblock %}
+

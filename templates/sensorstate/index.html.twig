@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Sensorstate index{% endblock %}
+
+{% block body %}
+    <h1>Sensorstate index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nom</th>
+                <th>State</th>
+                <th>DatetimeAt</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for sensorstate in sensorstates %}
+            <tr>
+                <td>{{ sensorstate.id }}</td>
+                <td>{{ sensorstate.nom }}</td>
+                <td>{{ sensorstate.state }}</td>
+                <td>{{ sensorstate.datetimeAt ? sensorstate.datetimeAt|date('Y-m-d H:i:s') : '' }}</td>
+                <td>
+                    <a href="{{ path('sensorstate_show', {'id': sensorstate.id}) }}">show</a>
+                    <a href="{{ path('sensorstate_edit', {'id': sensorstate.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="5">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('sensorstate_new') }}">Create new</a>
+{% endblock %}

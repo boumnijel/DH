@@ -1,0 +1,31 @@
+
+
+
+{{ form_start(form) }}
+
+
+{{ form_row(form.description,{'value':app.user.email}) }}
+
+
+    <div style="display: none">
+        {{ form_row(form.creatAt) }}
+        {{ form_row(form.state,{'value':'Future Consultation'}) }}
+        {{ form_row(form.background_color,{'value':'#ffcc00'}) }}
+        {{ form_row(form.border_color,{'value':'#ffeedd'}) }}
+        {{ form_row(form.text_color,{'value':'#000000'}) }}
+        {{ form_row(form.all_day) }}
+        {{ form_label(form.calendar_user, 'Current user', {
+            'label_attr': {'class': 'CUSTOM_LABEL_CLASS'}})
+        }}
+        {{ form_row(form.calendar_user,{'value':app.user.id}) }}
+        {{ form_row(form.user_patient,{'value':app.user.id}) }}
+
+    </div>
+
+
+<div class="btn-demo" align="right">
+    <button class="btn btn-success waves-effect">{{ button_label|default('Save') }}</button>
+</div>
+
+</div>
+{{ form_end(form) }}

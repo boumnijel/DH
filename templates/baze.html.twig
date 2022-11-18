@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {%  include ("header.html.twig")%}
+        {% block stylesheets %}
+            <!-- Bootstrap -->
+            <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
+            <link href="{{ asset('css/bootstrap-dropdownhover.min.css') }}" rel="stylesheet">
+            <!-- Fonts Awesome -->
+            <link href="{{ asset('css/font-awesome.min.css') }}" rel="stylesheet">
+
+            <!-- animate Effect -->
+            <link href="{{ asset('css/animate.css') }}" rel="stylesheet">
+            <!-- Main CSS -->
+            <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+            <!-- Responsive CSS -->
+            <link href="{{ asset('css/responsive.css') }}" rel="stylesheet">
+
+        {% endblock %}
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+    </head>
+    <body>
+        {% block body %}{% endblock %}
+    </body>
+    {%  include ("footer.html.twig")%}
+    {% block javascripts %}
+        <script src="{{ asset('js/jquery.min.js') }}"></script>
+        <script src="{{ asset('js/bootstrap.min.js') }}"></script>
+        <script src="{{ asset('js/jquery.plugin.min.js') }}"></script>
+        <script src="{{ asset('js/jquery.isotope.min.js') }}"></script>
+        <script src="{{ asset('js/jquery.magnific-popup.min.js') }}"></script>
+        <script src="{{ asset('js/bootstrap-dropdownhover.min.js') }}"></script>
+        <script src="{{ asset('js/wow.min.js') }}"></script>
+        <script src="{{ asset('js/waypoints.min.js') }}"></script>
+        <script src="{{ asset('js/jquery.counterup.min.js') }}"></script>
+        <script src="{{ asset('js/main.js') }}"></script>
+    {% endblock %}
+
+</html>

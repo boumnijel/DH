@@ -1,0 +1,368 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Calendar index{% endblock %}
+
+{% block body %}
+    <section id="content">
+        <div class="container">
+            <div class="block-header">
+                <ul class="actions">
+                    <li>
+                        <a href="">
+                            <i class="zmdi zmdi-trending-up"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="zmdi zmdi-check-all"></i>
+                        </a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="" data-toggle="dropdown">
+                            <i class="zmdi zmdi-more-vert"></i>
+                        </a>
+
+                        <ul class="dropdown-menu dropdown-menu-right">
+                            <li>
+                                <a href="">Refresh</a>
+                            </li>
+                            <li>
+                                <a href="">Manage Widgets</a>
+                            </li>
+                            <li>
+                                <a href="">Widgets Settings</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+
+            <div class="col-sm-12">
+                <div class="fg-line">
+                    <hr>
+                    <h5>Consent - Authorization to access documents</h5>
+                    <div class="checkbox m-b-15">
+                        <label>
+                            <input type="checkbox" value="" required="" name="test">
+                            <i class="input-helper"></i>
+                            I confirm that I have obtained the patient's consent for this information to be processed by DoctoHere and its partners so that the practitioner can prepare for the teleconsultation.
+                        </label>
+                    </div>
+
+
+                    <hr>
+                    <h5>These questions help you ensure that the patient's care path is adhered to.</h5>
+
+
+                    <small>Is the patient a beneficiary of AME?</small><br>
+
+                    <label class="radio radio-inline m-r-20">
+                        <input type="radio" name="q-AME" value="1">
+                        <i class="input-helper"></i>
+                        Yes
+                    </label>
+
+                    <label class="radio radio-inline m-r-20">
+                        <input type="radio" name="q-AME" value="0" checked="">
+                        <i class="input-helper"></i> No
+                    </label>
+
+                    <br><br>
+
+
+                    <small>Is the patient a beneficiary of C2S (Complementaire santé solidaire)?</small><br>
+
+                    <label class="radio radio-inline m-r-20">
+                        <input type="radio" name="q-C2S" value="1">
+                        <i class="input-helper"></i>
+                        Yes
+                    </label>
+
+                    <label class="radio radio-inline m-r-20">
+                        <input type="radio" name="q-C2S" value="0" checked="">
+                        <i class="input-helper"></i> No
+                    </label>
+
+
+                    <br><br>					<small>Does the patient have a relieving long-term condition (ALD)?</small><br>
+
+                    <label class="radio radio-inline m-r-20">
+                        <input type="radio" name="q-ALD" value="1">
+                        <i class="input-helper"></i>
+                        Yes
+                    </label>
+
+
+                    <label class="radio radio-inline m-r-20">
+                        <input type="radio" name="q-ALD" value="0" checked="">
+                        <i class="input-helper"></i> No
+                    </label>
+
+                    <br><br>
+
+
+                    <small>Is the patient recognized as disabled?</small><br>
+
+                    <label class="radio radio-inline m-r-20">
+                        <input type="radio" name="q-disabled" value="1">
+                        <i class="input-helper"></i>
+                        Yes
+                    </label>
+
+                    <label class="radio radio-inline m-r-20">
+                        <input type="radio" name="q-disabled" value="0" checked="">
+                        <i class="input-helper"></i> No
+                    </label>
+
+                    <br><br>
+
+                    <small>Is the patient a beneficiary of article L212-1 of the Code of military invalidity pensions and war victims?</small><br>
+
+                    <label class="radio radio-inline m-r-20">
+                        <input type="radio" name="q-L212" value="1">
+                        <i class="input-helper"></i>
+                        Yes
+                    </label>
+
+                    <label class="radio radio-inline m-r-20">
+                        <input type="radio" name="q-L212" value="0" checked="">
+                        <i class="input-helper"></i> No
+                    </label>
+                    <br><br>
+
+
+                    <h5>Proof</h5>
+                    <div class="fg-line">
+
+                                        <span class="btn btn-primary btn-file m-r-10 waves-effect">
+                                            <span class="fileinput-new">ADD PROOF</span>
+                                            <span class="fileinput-exists">Change</span>
+                                            <input type="file" id="photo" name="photo">
+                                        </span>
+                    </div>
+
+
+                    <hr>
+                    <h5>Reason and symptoms</h5>
+                    <small>Reason for consultation</small>	<br>
+                    <label class="radio radio-inline m-r-20">
+                        <input type="radio" name="inlineRadioOption" value="option" checked="">
+                        <i class="input-helper"></i>
+                        Cough, cold, stuffy nose, stiffness, flu symptoms ...
+                    </label>
+                    <br><br>
+                    <small>Symptom onset date *</small>
+
+                    <div class="col-sm-12">
+                        <div class="fg-line">
+
+                            <select class="selectpicker bs-select-hidden" data-live-search="false" id="q-symptoms-period" name="q-symptoms-period" style="max-height: 2px;">
+                                <option value="">Choose an option</option>
+
+                                <option value="Several minutes">Several minutes</option>
+                                <option value="Many hours">Many hours</option>
+                                <option value="Several days">Several days</option>
+                                <option value="Several months">Several months</option>
+                                <option value="Several years">Several years</option>
+                            </select><div class="btn-group bootstrap-select"><button type="button" class="btn dropdown-toggle btn-default" data-toggle="dropdown" data-id="q-symptoms-period" title="Choose an option"><span class="filter-option pull-left">Choose an option</span>&nbsp;<span class="caret"></span></button><div class="dropdown-menu open"><ul class="dropdown-menu inner" role="menu"><li data-original-index="0" class="selected"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">Choose an option</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="1"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">Several minutes</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="2"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">Many hours</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="3"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">Several days</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="4"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">Several months</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="5"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">Several years</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li></ul></div></div>
+                        </div>
+                    </div>
+
+
+                    <hr><br><br>
+
+
+                    <small>Are you feeling out of breath? </small><br>
+
+                    <label class="radio radio-inline m-r-20">
+                        <input type="radio" name="q-breath" value="1">
+                        <i class="input-helper"></i>
+                        Yes
+                    </label>
+
+                    <label class="radio radio-inline m-r-20">
+                        <input type="radio" name="q-breath" value="0">
+                        <i class="input-helper"></i> No
+                    </label>
+
+
+                    <label class="radio radio-inline m-r-20">
+                        <input type="radio" name="q-breath" value="2">
+                        <i class="input-helper"></i> I do not know
+                    </label>
+
+                    <br><br><hr>
+
+                    <small>Do you have any of the following symptoms? *</small><br>
+
+                    <div class="fg-line">
+                        <div class="checkbox m-b-15">
+                            <label>
+                                <input type="checkbox" value="Inability to complete a sentence normally " name="q-1">
+                                <i class="input-helper"></i>
+                                Inability to complete a sentence normally
+                            </label>
+                        </div>
+                    </div>
+
+
+                    <div class="fg-line">
+                        <div class="checkbox m-b-15">
+                            <label>
+                                <input type="checkbox" value="Cough" name="q-2">
+                                <i class="input-helper"></i>
+                                Cough
+                            </label>
+                        </div>
+                    </div>
+
+
+                    <div class="fg-line">
+                        <div class="checkbox m-b-15">
+                            <label>
+                                <input type="checkbox" value="Stuffy nose" name="q-3">
+                                <i class="input-helper"></i>
+                                Stuffy nose
+                            </label>
+                        </div>
+                    </div>
+
+
+                    <div class="fg-line">
+                        <div class="checkbox m-b-15">
+                            <label>
+                                <input type="checkbox" value="Runny nose" name="q-4">
+                                <i class="input-helper"></i>
+                                Runny nose
+                            </label>
+                        </div>
+                    </div>
+
+
+                    <div class="fg-line">
+                        <div class="checkbox m-b-15">
+                            <label>
+                                <input type="checkbox" value="Headache" name="q-5">
+                                <i class="input-helper"></i>
+                                Headache
+                            </label>
+                        </div>
+                    </div>
+
+
+                    <div class="fg-line">
+                        <div class="checkbox m-b-15">
+                            <label>
+                                <input type="checkbox" value="Complete loss of taste and smell" name="q-6">
+                                <i class="input-helper"></i>
+                                Complete loss of taste and smell
+                            </label>
+                        </div>
+                    </div>
+
+
+                    <div class="fg-line">
+                        <div class="checkbox m-b-15">
+                            <label>
+                                <input type="checkbox" value="Sore throat" name="q-7">
+                                <i class="input-helper"></i>
+                                Sore throat
+                            </label>
+                        </div>
+                    </div>
+
+
+                    <div class="fg-line">
+                        <div class="checkbox m-b-15">
+                            <label>
+                                <input type="checkbox" value="Aches" name="q-8">
+                                <i class="input-helper"></i>
+                                Aches
+                            </label>
+                        </div>
+                    </div>
+
+
+                    <div class="fg-line">
+                        <div class="checkbox m-b-15">
+                            <label>
+                                <input type="checkbox" value="None of the proposals" name="q-9"><i class="input-helper"></i>None of the proposals
+                            </label>
+                        </div>
+                    </div>
+
+                    <small>Do you have fever ?</small><br>
+
+                    <label class="radio radio-inline m-r-20">
+                        <input type="radio" name="q-fever" value="1"><i class="input-helper"></i>Yes
+                    </label>
+
+                    <label class="radio radio-inline m-r-20">
+                        <input type="radio" name="q-fever" value="0"><i class="input-helper"></i> No
+                    </label>
+
+
+                    <label class="radio radio-inline m-r-20">
+                        <input type="radio" name="q-fever" value="2"><i class="input-helper"></i> I do not know
+                    </label>
+
+                    <br><br><hr>
+
+                    <small>Do you have pain in your chest?</small><br>
+
+                    <label class="radio radio-inline m-r-20">
+                        <input type="radio" name="q-chest" value="1"><i class="input-helper"></i>   Yes
+                    </label>
+
+                    <label class="radio radio-inline m-r-20">
+                        <input type="radio" name="q-chest" value="0"><i class="input-helper"></i> No
+                    </label>
+
+
+
+
+                    <br><br><hr>
+
+                    <small>Is there anything else the doctor should know?</small><br>
+
+                    <label class="radio radio-inline m-r-20">
+                        <input type="radio" name="q-else" value="1"><i class="input-helper"></i> Yes
+                    </label>
+
+                    <label class="radio radio-inline m-r-20">
+                        <input type="radio" name="q-else" value="0"><i class="input-helper"></i> No
+                    </label>
+
+
+                    <br><br><hr>
+
+
+                    <h5>Ongoing treatment</h5>
+
+
+                    <small>Does the patient have current treatment (s)?</small><br>
+
+                    <label class="radio radio-inline m-r-20">
+                        <input type="radio" name="q-ongoing" value="1">
+                        <i class="input-helper"></i>
+                        Yes
+                    </label>
+
+                    <label class="radio radio-inline m-r-20">
+                        <input type="radio" name="q-ongoing" value="0" checked="">
+                        <i class="input-helper"></i> No
+                    </label>
+
+
+
+                    <div class="col-sm-12" align="right">
+                        <br><br>
+                        <!--<a href="pre_teleconsultation_physical.php?r=" class="btn bgm-blue btn-float waves-effect" style="float: right;"><i class="zmdi zmdi-mail-send"></i></a>-->
+                        <a href="{{ path('examination', {'id': calendar.id}) }}" class="btn bgm-blue btn-float waves-effect" style="float: right;"><i class="zmdi zmdi-mail-send"></i></a>
+
+                    </div> </div>                        </div>
+
+        </div></section>
+{% endblock %}
+

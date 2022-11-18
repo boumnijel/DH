@@ -1,0 +1,459 @@
+{% extends 'baze.html.twig' %}
+
+{% block body %}
+    <section id="slider" class="">
+        <!-- Carousel -->
+        <div id="main-slide" class="carousel slide" data-ride="carousel">
+
+            <!-- Indicators -->
+            <ol class="carousel-indicators visible-lg visible-md">
+                <li data-target="#main-slide" data-slide-to="0" class="active"></li>
+                <li data-target="#main-slide" data-slide-to="1"></li>
+                <li data-target="#main-slide" data-slide-to="2"></li>
+            </ol><!--/ Indicators end-->
+
+            <!-- Carousel inner -->
+            <div class="carousel-inner">
+
+                <div class="item active" style="background-image:url(images/slide/1.jpg)">
+                    <div class="slider-content text-left">
+                        <div class="col-md-12">
+                            <h2 class="slide-title effect2">Empowering People</h2>
+                            <h3 class="slide-sub-title effect3">Get your reservation now</h3>
+                            <p class="slider-description lead effect3">That was never easier to make a consultation</p>
+                            <p class="effect3">
+                                <a href="https://www.doctohere.com/Services/" class="slider btn btn-primary">Our Services</a>
+                                <a href="https://www.doctohere.com/AboutUs/" class="slider btn btn-secondary">About Us</a>
+                            </p>
+                        </div>
+                    </div>
+                </div><!--/ Carousel item 1 end -->
+
+
+                <div class="item" style="background-image:url(images/slide/2.jpg)">
+                    <div class="slider-content">
+                        <div class="col-md-12 text-center">
+                            <h3 class="slide-sub-title effect5">Create an account <br> or connect now</h3>
+                            <p>
+                                <a href="https://www.doctohere.com/Services/" class="slider btn btn-primary">Our Services</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!--/<div class="item" style="background-image:url(images/slide/3.jpg)">
+                     <div class="slider-content text-right">
+                        <div class="col-md-12">
+                            <h2 class="slide-title effect6">To better healthcare</h2>
+                            <h3 class="slide-sub-title effect7">Leading the way</h3>
+                            <p class="slider-description lead effect7">Your assistant in medical consultation</p>
+                            <p>
+                             <a href="#" class="slider btn btn-primary">Consultation</a>
+                             <a href="#" class="slider btn btn-primary border">View video demonstration</a>
+                            </p>
+                        </div>
+                     </div>
+                 </div> --><!--/ Carousel item 3 end -->
+
+            </div><!-- Carousel inner end-->
+
+            <!-- Controllers -->
+            <a class="left carousel-control" href="#main-slide" data-slide="prev">
+                <span><i class="fa fa-angle-left"></i></span>
+            </a>
+            <a class="right carousel-control" href="#main-slide" data-slide="next">
+                <span><i class="fa fa-angle-right"></i></span>
+            </a>
+        </div><!--/ Carousel end -->
+    </section>
+    <section id="section1" class="section-margine">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-6">
+                    <div class="section-1-box wow bounceIn">
+                        <div class="section-1-box-icon-background"><i class="fa fa-ambulance fa-2x"></i></div>
+                        <h4 class="text-center">Emergency Services</h4>
+                        <p class="text-center">Find your reservation in less than 3 minutes 24/24 and 7/7</p>
+                    </div>
+                </div>
+                <div class="col-md-3  col-sm-6">
+                    <div class="section-1-box wow bounceIn" data-wow-delay=".1s">
+                        <div class="section-1-box-icon-background"><i class="fa fa-user-md fa-2x"></i></div>
+                        <h4 class="text-center">Medical Excellence</h4>
+                        <p class="text-center">Medical equipment in international standards, and easy for use</p>
+                    </div>
+                </div>
+                <div class="col-md-3  col-sm-6">
+                    <div class="section-1-box wow bounceIn" data-wow-delay=".2s">
+                        <div class="section-1-box-icon-background"><i class="fa fa-h-square fa-2x"></i></div>
+                        <h4 class="text-center">Instant Diagnostic</h4>
+                        <p class="text-center">Your medical information transfered immediately to your e-Doctor</p>
+                    </div>
+                </div>
+                <div class="col-md-3  col-sm-6">
+                    <div class="section-1-box wow bounceIn" data-wow-delay=".3s">
+                        <div class="section-1-box-icon-background"><i class="fa fa fa-heartbeat fa-2x"></i></div>
+                        <h4 class="text-center">Medical Historic</h4>
+                        <p class="text-center">Find your medical history by connecting you your personal account</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="section2" class="section-margine">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 nopadding">
+                    <div class="col-md-6 col-sm-6">
+                        <div class="section-2-box-left wow fadeInLeft">
+                            <figure><img src="images/m1.jpg" class="img-responsive"></figure>
+                            <h4>Doctor</h4>
+                            <p>Doctors receive exact information from the medical equipments in realtime. Wherever you are, you can make your consultation</p>
+                            <a href="https://www.doctohere.com/Services/" class="btn btn-primary">Know More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6">
+                        <div class="section-2-box-left wow fadeInLeft">
+                            <figure><img src="images/m2.jpg" class="img-responsive"></figure>
+                            <h4>Patient</h4>
+                            <p>Enough full hospitals and for more safety, make your e-consultation wherever you are.</p>
+                            <a href="https://www.doctohere.com/Services/" class="btn btn-primary">Know More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4  col-sm-12">
+                    <div class="section-2-box-right wow fadeInRight">
+                        <h3>How it works</h3>
+                        <p>You can star by creating an account, edit your personal information, upload your medical history and make a reservation instantly with qualified doctors around your country.</p>
+                        <ul>
+                            <li>Create a new account</li>
+                            <li>Complete your information</li>
+                            <li>Make your reservations</li>
+                        </ul>
+                        <a data-toggle="modal" href="https://www.doctohere.com/Login/" class="btn btn-default">Book Appointment</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="section3" class="section-margine section3-background">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-6">
+                    <div class="section-3-box">
+                        <figure><i class="fa fa-desktop fa-2x"></i></figure>
+                        <h3><span class="counter">1000</span>+</h3>
+                        <h4>Our Doctors </h4>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="section-3-box">
+                        <figure><i class="fa fa-group fa-2x"></i></figure>
+                        <h3><span class="counter">1520</span>+</h3>
+                        <h4>Total Cabins</h4>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="section-3-box">
+                        <figure><i class="fa fa-coffee fa-2x"></i></figure>
+                        <h3><span class="counter">5000</span>+</h3>
+                        <h4>Total patients</h4>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="section-3-box">
+                        <figure><i class="fa fa-glass fa-2x"></i></figure>
+                        <h3><span class="counter">400</span>+</h3>
+                        <h4>Awards press</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="section4" class="section-4 section-margine">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <header class="title-head">
+                        <h2>Medical Services</h2>
+                        <div class="line-heading">
+                            <span class="line-left"></span>
+                            <span class="line-middle">+</span>
+                            <span class="line-right"></span>
+                        </div>
+                    </header>
+                </div>
+                <div class="col-md-4 col-sm-6 right wow fadeInUp">
+                    <ul class="section">
+                        <li class="left"><i class="fa fa-medkit"></i></li>
+                        <li><strong>Generalist</strong>
+                            <p>For general illness, you can find easily your doctor and make your consultation online</p>
+                            <a href="https://www.doctohere.com/Services/" class="btn btn-primary btn-sm">Know More</a>
+                    </ul>
+                    <ul class="section two">
+                        <li class="left"><i class="fa fa-stethoscope"></i></li>
+                        <li><strong>Cardiology</strong>
+                            <p>With our high quality medical equipments, your doctor can have your diagnostic in realtime</p>
+                            <a href="https://www.doctohere.com/Services/" class="btn btn-primary btn-sm">Know More</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4 hidden-sm hidden-xs left wow fadeInUp" data-wow-delay=".2s"><img alt="" src="images/m4.png"></div>
+                <!-- end left -->
+                <div class="col-md-4 col-sm-6 right wow fadeInUp" data-wow-delay=".3s">
+                    <ul class="section three">
+                        <li class="left"><i class="fa fa-user-md"></i></li>
+                        <li><strong>Pediatry</strong>
+                            <p>No more need to wait days and weekes for your children consultation, now you can make an appointment in 3 minutes</p>
+                            <a href="https://www.doctohere.com/Services/" class="btn btn-primary btn-sm">Know More</a>
+                        </li>
+                    </ul>
+                    <ul class="section four">
+                        <li class="left"><i class="fa fa-unlink"></i></li>
+                        <li><strong>Medical work</strong>
+                            <p>Work examination has never been easier, no need to be absent at work</p>
+                            <a href="https://www.doctohere.com/Services/" class="btn btn-primary btn-sm">Know More</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section  id="section5" class="section-5 section-margine">
+        <div class="container">
+            <div class="row my-team">
+                <div class="col-md-12">
+                    <header class="title-head">
+                        <h2>Awesome Doctors Team</h2>
+                        <p>
+                            Along with tele-expertise, telesurveillance, medical tele-assistance and medical response, teleconsultation is one of the 5 regulatory telemedicine acts.</p>
+                        <div class="line-heading">
+                            <span class="line-left"></span>
+                            <span class="line-middle">+</span>
+                            <span class="line-right"></span>
+                        </div>
+                    </header>
+                </div>
+                <div class="col-md-3 col-sm-6 my-team-member wow fadeInUp">
+                    <div class="my-member-img">
+                        <img src="../../public/images/team/1.jpg" class="img-responsive" alt="team01">
+                    </div>
+                    <div class="my-team-detail text-center">
+                        <h4 class="my-member-name">Hugo Delavigne</h4>
+                        <p class="my-member-post">Generalist</p>
+                        <div class="my-member-social">
+                            <ul>
+                                <li><a href="#" target="_blank"><i class="fa fa-envelope"></i></a></li>
+                                <li><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 my-team-member wow fadeInUp" data-wow-delay=".2s">
+                    <div class="my-member-img">
+                        <img src="images/team/2.jpg" class="img-responsive" alt="team02">
+                    </div>
+                    <div class="my-team-detail text-center">
+                        <h4 class="my-member-name">Jacqueline Chirot</h4>
+                        <p class="my-member-post">Dermatologist</p>
+                        <div class="my-member-social">
+                            <ul>
+                                <li><a href="#" target="_blank"><i class="fa fa-envelope"></i></a></li>
+                                <li><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 my-team-member wow fadeInUp" data-wow-delay=".3s">
+                    <div class="my-member-img">
+                        <img src="images/team/3.jpg" class="img-responsive" alt="team03">
+                    </div>
+                    <div class="my-team-detail text-center">
+                        <h4 class="my-member-name">Kassy Renauld</h4>
+                        <p class="my-member-post">Pediatrist</p>
+                        <div class="my-member-social">
+                            <ul>
+                                <li><a href="#" target="_blank"><i class="fa fa-envelope"></i></a></li>
+                                <li><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 my-team-member wow fadeInUp" data-wow-delay=".2s">
+                    <div class="my-member-img">
+                        <img src="images/team/4.jpg" class="img-responsive" alt="team04">
+                    </div>
+                    <div class="my-team-detail text-center">
+                        <h4 class="my-member-name">Omar Khachab</h4>
+                        <p class="my-member-post">Orthophonist</p>
+                        <div class="my-member-social">
+                            <ul>
+                                <li><a href="#" target="_blank"><i class="fa fa-envelope"></i></a></li>
+                                <li><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="section14" class="section-margine">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-lg-12">
+                    <header class="title-head">
+                        <h2>Tips and advices</h2>
+                        <p>In this section, you can read the news in medecin and telemedecine and learn some new tips </p>
+                        <div class="line-heading">
+                            <span class="line-left"></span>
+                            <span class="line-middle">+</span>
+                            <span class="line-right"></span>
+                        </div>
+                    </header>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 col-lg-4">
+                    <div class="section-14-box wow fadeInUp">
+                        <img src="images/blog/blog-1.jpg" class="img-responsive" alt="Blog image 1">
+                        <h3><a href="#">News Pfizer</a></h3>
+                        <div class="row">
+                            <div class="col-md-12 col-lg-12">
+                                <div class="comments">
+                                    <a class="btn btn-primary btn-sm">December 24</a>
+                                    <a href="#" class="btn btn-primary btn-sm">Actuality</a>
+                                </div>
+                            </div>
+                        </div>
+                        <p>Pfizer's Covid vaccine should be administered from Sunday, December 27 in France, first in nursing homes.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-4">
+                    <div class="section-14-box wow fadeInUp" data-wow-delay=".2s">
+                        <h3><a href="#">Test Covid 19 in Paris</a></h3>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="comments">
+                                    <a class="btn btn-primary btn-sm">December 22</a>
+                                    <a href="#" class="btn btn-primary btn-sm">News</a>
+                                </div>
+                            </div>
+                        </div>
+                        <p>Tests are becoming more and more widespread in order to detect cases of Covid-19 at the earliest</p>
+                        <img src="images/blog/blog-2.jpg" class="img-responsive" alt="Blog image 1">
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-4">
+                    <div class="section-14-box wow fadeInUp" data-wow-delay=".3s">
+                        <img src="images/blog/blog-3.jpg" class="img-responsive" alt="Blog image 1">
+                        <h3><a href="#">Propoerty is the solution</a></h3>
+                        <div class="row">
+                            <div class="col-md-12 col-lg-12">
+                                <div class="comments">
+                                    <a class="btn btn-primary btn-sm">December 20</a>
+                                    <a href="#" class="btn btn-primary btn-sm">Tips</a>
+                                </div>
+                            </div>
+                        </div>
+                        <p>Protect yourself and others by staying informed and taking appropriate precautions. Follow the advice of local health authorities.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="section8" class="mytestimonial">
+        <div class="container">
+            <div class="row">
+                <div data-ride="carousel" class="carousel slide" id="testimonial">
+                    <ol class="carousel-indicators">
+                        <li data-target="#testimonial" data-slide-to="0" class="active"><img alt="Testimonial" class="img-responsive" src="images/people/1.jpg">
+                        </li>
+                        <li data-target="#testimonial" data-slide-to="1"><img alt="Testimonial" class="img-responsive" src="images/people/2.jpg">
+                        </li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="item text-center quotes-detail active left">
+                            <p class="client-quote"><i class="fa fa-quote-left"></i>Very glad of the result, easy and comfortable<i class="fa fa-quote-right "></i></p>
+                            <h5 class="client-name">John</h5>
+                        </div>
+                        <div class="item text-center quotes-detail next left">
+                            <p class="client-quote"><i class="fa fa-quote-left "></i>Thank you DoctoHere, i dont need anymore to go to the doctor to renew my prescription<i class="fa fa-quote-right "></i></p>
+                            <h5 class="client-name">Sonia</h5>
+                        </div>
+                    </div> <!-- end carosel-inner -->
+                </div> <!-- end Quotes -->
+            </div>
+        </div>
+    </section>
+    <section id="section9" class="section-9-background">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2 col-sm-4 col-xs-6"><img src="images/clients/1.png" class="img-responsive wow fadeInUp" alt=""></div>
+                <div class="col-md-2 col-sm-4 col-xs-6"><img src="images/clients/2.png" class="img-responsive wow fadeInUp" alt=""></div>
+                <div class="col-md-2 col-sm-4 col-xs-6"><img src="images/clients/3.png" class="img-responsive wow fadeInUp" alt=""></div>
+                <div class="col-md-2 col-sm-4 col-xs-6"><img src="images/clients/4.png" class="img-responsive wow fadeInUp" alt=""></div>
+                <div class="col-md-2 col-sm-4 col-xs-6"><img src="images/clients/5.png" class="img-responsive wow fadeInUp" alt=""></div>
+                <div class="col-md-2 col-sm-4 col-xs-6"><img src="images/clients/6.png" class="img-responsive wow fadeInUp" alt=""></div>
+            </div>
+        </div>
+    </section>
+    <section id="section23" class="appointment">
+        <div class="modal fade" id="appointment" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog style-one" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">Make an Appoinment</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="appoinment-form-outer">
+                            <form action="" method="post">
+                                <h4>Fill Up Appointment Form.</h4>
+                                <div class="form-group">
+                                    <label>Name <span class="required">*</span></label>
+                                    <input type="text" class="form-control" required="" placeholder="First Name" value="" name="name">
+                                </div>
+                                <div class="form-group">
+                                    <label>Email <span class="required">*</span></label>
+                                    <input type="email" class="form-control" required="" placeholder="Email" value="" name="name">
+                                </div>
+                                <div class="form-group">
+                                    <label>Phone <span class="required">*</span></label>
+                                    <input type="text" class="form-control" required="" placeholder="Phone" value="" name="name">
+                                </div>
+                                <div class="form-group">
+                                    <label>Age <span class="required">*</span></label>
+                                    <input type="text" class="form-control" required="" placeholder="age" value="" name="name">
+                                </div>
+                                <div class="form-group">
+                                    <label>Appoinment Date <span class="required">*</span></label>
+                                    <input class="datepicker form-control" type="text" required="" placeholder="MM/DD/Year" value="" name="name">
+                                </div>
+                                <div class="form-group">
+                                    <label>Time<span class="required">*</span></label>
+                                    <input type="text"  class="timepicker form-control" required="" placeholder="Time" value="" name="name">
+                                </div>
+                                <div class="form-group">
+                                    <label>Address <span class="required">*</span></label>
+                                    <input type="text" class="form-control" required="" placeholder="Address" value="" name="name">
+                                </div>
+                                <div class="text-left">
+                                    <button type="button" class="btn btn-primary">Send Message</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
